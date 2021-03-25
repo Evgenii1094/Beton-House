@@ -1,0 +1,738 @@
+/* @media only screen and  (max-width: 1280px){
+    .container-main, .container{
+        width: 90%;
+    }
+
+    .tabs-active{
+        margin: 0 auto;
+    }
+
+    .map-contact{
+        top: 120px;
+        left: 45px;
+    }
+
+}
+
+@media only screen and  (max-width: 1024px){ */
+
+/* HEADER */
+
+    /* .container-main, .container{
+        width: 90%;
+    }
+
+    .adv-variant{
+        flex-wrap: wrap;
+        width: 380px;
+        margin: 40px 0;
+    }
+
+    .adv-item-list{
+        margin-bottom: 20px;
+    }
+
+    .curier{
+        bottom: -3px;
+        left: 380px;
+    }
+    
+    .bus-header{
+        left: 420px;
+    } */
+
+/* HAPPEN */
+/* 
+    .title{
+        margin: 0 auto;
+    }
+
+    .happen{
+        justify-content: space-around;
+        margin: 0;
+    }
+
+    .happen-item{
+        width: 415px;
+    }
+
+    .number{
+        padding: 0;
+    }
+
+    .happen-text-mob{
+        margin-left: 85px;
+    } */
+
+/* AUTOPARK */
+/* 
+    .tabs-active{
+        width: 920px;
+    }
+
+    .ipad-pro-title{
+        padding-bottom: 15px;
+    } */
+
+/* REVIEW */
+
+    /* .review-item{
+        width: 60%;
+    } */
+
+/* MAP */
+/* 
+    .map-contact{
+        top: 120px;
+        left: 45px;
+    }
+
+    .price-title{
+        padding-top: 0;
+    }
+
+    .price{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .price-item{
+        margin-bottom: 20px;
+        width: 50%;
+    }
+
+    .review{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .review-item{
+        width: 370px;
+
+    }
+
+    .footer{
+        flex-wrap: wrap;
+    }
+
+    .footer-item:last-child{
+        display: block;
+        margin: 0 auto;
+        margin-top: 30px;
+    }
+}
+
+@media only screen and  (max-width: 991px){ */
+
+/* HEADER */
+/* 
+    .container-main, .container{
+        width: 90%;
+    }
+
+    h1{
+        width: 480px;
+        font-size: 60px;
+    }
+
+    .title-item{
+        font-size: 26px;
+    }
+
+    .adv-variant{
+        width: 320px;
+    }
+    
+    .adv-item-list{
+        width: 115px;
+    }
+
+}
+
+@media only screen and  (max-width: 768px){
+
+    html {
+        overflow-x: hidden;
+    }
+
+    .container-main, .container{
+        width: 90%;
+    }
+
+    .logo a, .logo-map a{
+        font-size: 26px;
+    }
+
+    .header-list{
+        width: 320px;
+    }
+
+    .header-list a{
+        font-size: 16px;
+    }
+
+    .phone a{
+        font-size: 18px;
+    }
+
+    .curier {
+        bottom: -3px;
+        left: 330px;
+    }
+
+    .curier img{
+        width: 380px;
+    }
+    
+    .bus-header{
+        top: 160px;
+        left: 280px;
+    }
+
+    .bus-header img{
+        width: 440px;
+    }
+
+    .tabs-active{
+        width: 620px;
+    }
+
+    .tabs-picture img{
+        width: 100%;
+    }
+
+    .map-contact{
+        padding: 30px 25px;
+        top: 130px;
+        left: 30px;
+    }
+    
+    .logo-map{
+        font-size: 26px;
+    }
+    
+    .map-item li{
+        font-size: 14px;
+    }
+    
+    .map-item-link span{
+        font-size: 14px;
+    }
+
+    .footer{
+        align-items: center;
+    }
+
+    .footer-item:last-child{
+        margin: 0;
+    }
+
+}
+
+@media only screen and  (max-width: 480px){
+    
+}
+
+@media only screen and  (max-width: 320px){
+
+    .header{
+        padding: 27px 0 17px 0;
+    }
+
+    .header-list{
+        display: none;
+    }
+
+    .phone{
+        display: none;
+    }
+    
+    .mobile-element{
+        display: block;
+        font-size: 35px;
+    }
+
+    .mobile-element a{
+        text-decoration: none;
+        color: #333333;
+    }
+
+    .bus-header{
+        display: none;
+    }
+
+    .callback-bt{
+        display: none;
+    }
+
+    h1{
+        width: 70%;
+        font-weight: bold;
+        font-size: 28px;
+        text-align: center;
+        padding: 0;
+        margin: 0 auto;
+        padding-bottom: 5px;
+    }
+
+    .title-item{
+        font-size: 18px;
+        text-align: center;
+        margin-bottom: 360px;
+    }
+
+    .curier img{
+        width: 90%;
+    }
+
+    .curier{
+        top: 135px;
+        left: 8%;
+        width: 100%;
+    }
+
+    .btn{
+        width: 100%;
+        display: block;
+        margin: 0 auto;
+        background-color: #FF352B;
+        outline: none;
+        border: none;
+        color: #fff;
+    }
+
+    .animate{
+        padding-bottom: 40px;
+    }
+
+    .advantage{
+        display: none;
+    }
+
+    .title{
+        padding: 40px 0;
+        text-align: center;
+    }
+
+    .title h3{
+        font-size: 20px;
+    }
+
+    .happen{
+        flex-direction: column;
+    }
+
+    .happen-item{
+        display: block;
+        width: 100%;
+    }
+
+    .happen-item-text{
+        width: 75%;
+    }
+
+    .happen-item-text span{
+        display: none;
+    }
+
+    .happen-item-text h5{
+        font-weight: normal;
+        font-size: 16px;
+        width: 50%;
+        padding: 0;
+    }
+
+    .number{
+        padding-right: 0;
+    }
+
+    #price{
+        background-color: #F8FBFF;
+    }
+
+    .price-title h4{
+        display: none;
+    }
+
+    .price-item{
+        width: 70%;
+        padding: 0;
+        border: none;
+        box-sizing: border-box;
+        text-align: center;
+    }
+
+    .price-item h4{
+        font-size: 22px;
+    }
+    
+    .btn-small{
+        width: 100%;
+        display: block;
+        margin: 0 auto;
+    }
+
+    .price-item:nth-child(2){
+        display: none;
+    }
+
+    .price-item:nth-child(3){
+        display: none;
+    }
+
+    .title-autopark{
+        display: none;
+    }
+
+    .ipad-pro-title{
+        padding: 0;
+    }
+
+    .tabs-link li{
+        padding: 0;
+        border: none;
+    }
+
+    .catalog-tab-active{
+        background-color: #fff;
+        color: #333333;
+        border-bottom: 1px solid #FED100;
+    }
+
+} */
+
+
+/* 992px - 1200px */
+@media screen and (max-width: 1200px){
+    .container-main, .container{
+        width: 960px;
+    }
+
+    .tabs-active{
+        width: 90%;
+    }
+
+    .footer{
+        width: 90%;
+    }
+}
+
+/* 768px - 992px */
+@media screen and (max-width: 992px){
+    .container-main, .container{
+        width: 730px;
+    }
+
+    .header{
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .header-list{
+        width: 100%;
+    }
+
+    .header-list a{
+        font-size: 15px;
+    }
+
+    .phone a{
+        font-size: 17px;
+    }
+
+    .adv-variant{
+        flex-wrap: wrap;
+        width: 380px;
+    }
+
+    .adv-item-list{
+        margin-bottom: 30px;
+    }
+
+    .adv-item-list:last-child{
+        margin-bottom: 0;
+    }
+
+    .curier {
+        bottom: -3px;
+        left: 380px;
+    }
+
+    .curier img{
+        width: 350px;
+    }
+    
+    .bus-header{
+        top: 160px;
+        left: 340px;
+    }
+
+    .bus-header img{
+        width: 400px;
+    }
+
+    .happen{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .happen-item-text{
+        width: 30%;
+    }
+
+    .price{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .price-item{
+        margin-bottom: 40px;
+        width: 60%;
+    }
+
+    .tabs-picture img{
+        width: 100%;
+    }
+
+    .footer{
+        padding-bottom: 50px;
+    }
+
+    .footer-item{
+        width: 33%;
+    }
+
+    .footer-mobile{
+        display: none;
+    }
+
+}
+
+
+/* 576px - 768px */
+@media screen and (max-width: 768px){
+    .container-main, .container{
+        width: 540px;
+    }
+
+    .header{
+        padding-bottom: 25px;
+    }
+
+    .nav-list, .phone, .bus-header, .advantage, .callback-bt{
+        display: none;
+    }
+
+    .modal-hamburger{
+        display: block;
+    }
+
+    .hamburger{
+        display: block;
+    }
+
+    .title-item{
+        text-align: center;
+        padding-bottom: 335px;
+    }
+
+    h1{
+        font-size: 40px;
+        text-align: center;
+        margin: 0 auto;
+    }
+
+    .curier{
+        position: absolute;
+        top: 218px;
+        left: 30%;
+    }
+
+    .curier img{
+        width: 260px;
+    }
+
+    .btn{
+        width: 80%;
+        display: block;
+        margin: 0 auto;
+    }
+
+    .animate{
+        padding-bottom: 40px;
+    }
+
+    .happen-item-text span{
+        display: none;
+    }
+
+    .happen-item{
+        width: 80%;
+        justify-content: center;
+    }
+
+    .yellow-number, .number{
+        font-size: 60px;
+    }
+
+    .happen-item-text h5{
+        font-size: 32px;
+    }
+
+    .happen-item-text:last-child{
+        margin-bottom: 0;
+    }
+
+    #price{
+        background: #F8FBFF;
+    }
+
+    .title-autopark{
+        display: none;
+    }
+
+    .tabs-link li{
+        padding: 0;
+        border: none;
+        margin: 0 30px;
+        font-size: 18px;
+    }
+
+    .tabs-link .catalog-tab-active{
+        background-color: transparent;
+        font-weight: 500;
+        color: #333333;
+        border-bottom: 2px solid #FED100;
+    }
+
+    .review{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .review-item{
+        width: 70%;
+    }
+
+    .form-subtitle{
+        width: 70%;
+        font-size: 25px;
+        margin: 60px auto 15px auto;
+    }
+
+    .form-btn{
+        width: 80%;
+    }
+
+    .footer{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding-bottom: 0;
+    }
+
+    .footer-logo{
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer-text:last-child{
+        padding-bottom: 0;
+    }
+
+    .footer-item{
+        margin-bottom: 40px;
+    }
+
+    .footer-btn{
+        margin-bottom: 30px;
+        width: 100%;
+    }    
+}
+
+/* 320px - 576px */
+@media screen and (max-width: 576px){
+    .container-main, .container{
+        width: 290px;
+    }
+
+    h1{
+        width: 80%;
+        font-size: 30px;
+    }
+
+    .title-item{
+        font-size: 20px;
+    }
+
+    .curier{
+        position: absolute;
+        top: 215px;
+        left: 10%;
+    }
+
+    .curier img{
+        width: 240px;
+    }
+
+    .title h3{
+        font-size: 22px;
+    }
+
+    .yellow-number, .number{
+        font-size: 40px;
+    }
+
+    .happen-item-text h5{
+        font-size: 16px;
+        margin-left: 50px;
+    }
+
+    .price-item{
+        width: 100%;
+    }
+
+    .tabs-link li{
+        margin: 0 10px;
+    }
+
+    .tabs-picture{
+        text-align: center;
+    }
+
+    .tabs-picture img{
+        display: none;
+    }
+
+    .form-flex{
+        width: 100%;
+    }
+
+    .form-container input{
+        width: 90%;
+    }
+
+    .form-btn{
+        width: 100%;
+    }
+
+    .map-contact{
+        display: none;
+    }
+
+    .footer-phone{
+        width: 100%;
+    }
+
+    .modal{
+        width: 80%;
+    }
+
+    .modal-close{
+        top: 10px;
+        right: 20px;
+    }
+}
