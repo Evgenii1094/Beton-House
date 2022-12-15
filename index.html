@@ -21,7 +21,7 @@
                 <div class="header-item logo">
                     <a href="#">MOVEE</a>
                 </div>
-                <div class="header-item nav-list scrollto">
+                <div class="header-item nav-list">
                     <ul class="header-list">
                         <li><a href="#price">Цены</a></li>
                         <li><a href="#autopark">Автопарк</a></li>
@@ -33,7 +33,7 @@
                     <a href="tel:88000801213">8(800)-080-12-13</a>
                 </div>
                 <div class="hamburger">
-                    <a href="#hamburger-menu" data-modal="burger" class="mobile-menu" id="mobile-menu-btn">
+                    <a href="#hamburger-menu" class="mobile-menu" id="hamburger-btn">
                     <i class="fas fa-bars"></i>
                     </a>
                 </div>
@@ -41,7 +41,7 @@
             <div data-aos="fade-up" data-aos-duration="1200" class="animate">
                 <h1>Квартирные переезды</h1>
                 <div class="title-item">По Москве и области</div>
-                <button data-modal="order" class="btn btn-mini">Заказать</button>
+                <button data-modal class="btn btn-mini">Заказать</button>
                 <div class="advantage">
                     <div class="adv-item adv-variant">
                         <div class="adv-item-list">
@@ -64,7 +64,7 @@
                         </div>
                     </div>
                 </div>
-                <div data-modal="order" type="button" class="callback-bt">
+                <div data-modal type="button" class="callback-bt">
                     <div class="text-call">
                         <i class="fa fa-phone"></i>
                         <span>Заказать<br>звонок</span>
@@ -149,7 +149,7 @@
                         <li>Переезд за 4 часа</li>
                     </ul>
                     <span>8 490₽</span>
-                    <button class="btn-small btn-mini">Заказать</button>
+                    <button data-modal class="btn-small btn-mini">Заказать</button>
                 </div>
                 <div class="price-item">
                     <h4 class="subtitle">2-комнатная кв-ра</h4>
@@ -159,7 +159,7 @@
                         <li>Переезд за 4 часа</li>
                     </ul>
                     <span>10 990₽</span>
-                    <button class="btn-small btn-mini">Заказать</button>
+                    <button data-modal class="btn-small btn-mini">Заказать</button>
                 </div>
                 <div class="price-item">
                     <h4 class="subtitle">3-комнатная кв-ра</h4>
@@ -169,7 +169,7 @@
                         <li>Переезд за 6 часов</li>
                     </ul>
                     <span>16 490₽</span>
-                    <button class="btn-small btn-mini">Заказать</button>
+                    <button data-modal class="btn-small btn-mini">Заказать</button>
                 </div>
             </div>
         </div>
@@ -194,15 +194,15 @@
                 
                 <div class="tabs-container">
                 
-                    <div class="tabs-container-item tabs-active">
-                        <div class="tabs-picture">
+                    <div class="tabs-container-item">
+                        <div class="tabs-picture is-left">
                             <h4>Газель 3 метра </h4>
                             <ul>
                                 <li>Ширина 2 м</li>
                                 <li>Высота 2 м</li>
                                 <li>Объем 16 м³</li>
                                 <li>Грузоподъемность 1,5 т</li>
-                                <button class="btn-small tabs-btn btn-mini">Заказать</button>
+                                <button data-modal class="btn-small tabs-btn btn-mini">Заказать</button>
                             </ul>
                         </div>
                         <div class="tabs-picture">
@@ -218,7 +218,7 @@
                                 <li>Высота 2,5 м</li>
                                 <li>Объем 20 м³</li>
                                 <li>Грузоподъемность 2,5 т</li>
-                                <button class="btn-small tabs-btn btn-mini">Заказать</button>
+                                <button data-modal class="btn-small tabs-btn btn-mini">Заказать</button>
                             </ul>
                         </div>
                         <div class="tabs-picture">
@@ -234,7 +234,7 @@
                                 <li>Высота 3 м</li>
                                 <li>Объем 25 м³</li>
                                 <li>Грузоподъемность 4,5 т</li>
-                                <button class="btn-small btn-mini tabs-btn">Заказать</button>
+                                <button data-modal class="btn-small btn-mini tabs-btn">Заказать</button>
                             </ul>
                         </div>
                         <div class="tabs-picture">
@@ -393,9 +393,9 @@
     </div>
 
 
-    <div class="overlay">
+    <div class="overlay" id="modal">
         <div class="modal" id="order">
-            <div class="modal-close">&times;</div>
+            <div data-close class="modal-close">&times;</div>
             <div class="modal-subtitle">Закажи  переезд прямо сейчас</div>
             <div class="modal-descr">Мы перезвоним в течении 10 секунд</div>
             <div>
@@ -407,13 +407,6 @@
             </div>
         </div>
     </div>
-
-    <div class="modal modal-mini" id="thanks">
-        <div class="modal-close">&times;</div>
-        <div class="modal-subtitle">Спасибо за вашу заявку!</div>
-        <div class="modal-descr">Наш менеджер свяжется с вами в ближайшее время!</div>
-    </div>
-
 
     <script src="https://kit.fontawesome.com/07973bb733.js" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>

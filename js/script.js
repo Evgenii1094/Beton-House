@@ -1,25 +1,4 @@
 $(document).ready(function(){
-    $('ul.tabs-link').on('click', 'li:not(.catalog-tab-active)', function() {
-        $(this)
-          .addClass('catalog-tab-active').siblings().removeClass('catalog-tab-active')
-          .closest('div.tabs').find('div.tabs-container-item').removeClass('tabs-active').eq($(this).index()).addClass('tabs-active');
-      });
-      
-
-    $('[data-modal=order]').on('click', function() {
-        $('.overlay, #order').fadeIn('slow');
-    });
-    $('.modal-close').on('click', function() {
-        $('.overlay, #order, #thanks').fadeOut('slow');
-    });
-
-    $('.btn-mini').each(function(i) {
-        $(this).on('click', function() {
-            $('#order .modal-descr').text($('Заполни форму').eq(i).text());
-            $('.overlay, #order').fadeIn('slow');
-        })
-    });
-
     function valideForms(form){
         $(form).validate({
             rules: {
@@ -37,40 +16,122 @@ $(document).ready(function(){
 
     $(".form-phone").mask("+38 (999) 999-99-99");
 
-    $('form').submit(function(e) {
-        e.preventDefault();
-        $.ajax({
-            type: "POST",
-            url: "mailer/smart.php",
-            data: $(this).serialize()
-        }).done(function() {
-            $(this).find("input").val("");
-            $('#call, #order').fadeOut();
-            $('.overlay, #thanks').fadeIn('slow');
-            $('form').trigger('reset');
+  });
+
+  window.addEventListener('DOMContentLoaded', () => {
+    const tabs = document.querySelectorAll('.catalog-tab'),
+          tabsContent = document.querySelectorAll('.tabs-container-item'),
+          tabsParent = document.querySelector('.tabs-link'),
+          modalButton = document.querySelectorAll('[data-modal'),
+          modalClose = document.querySelector('[data-close'),
+          modal = document.querySelector('#modal'),
+          hamburgetBtn = document.querySelector('#hamburger-btn'),
+          hamburgerMenu = document.querySelector('.overlay-hamburger'),
+          hamburgerClose = document.querySelector('.hamburger-close'),
+          anchors = document.querySelectorAll('a[href*="#"]');
+
+    // Tabs
+    function hideTabContent() {
+        tabsContent.forEach(item => {
+            item.classList.add('hide');
+            item.classList.remove('show', 'fade');
         });
-        return false;
-    });
 
-    $('.scrollto a').on('click', function() {
-
-        let href = $(this).attr('href');
-    
-        $('html, body').animate({
-            scrollTop: $(href).offset().top
-        }, {
-            duration: 350,   // по умолчанию «400» 
-            easing: "linear" // по умолчанию «swing» 
+        tabs.forEach(item => {
+            item.classList.remove('catalog-tab-active');
         });
-    
-        return false;
+    }
+
+    function showTabContent(i = 0) {
+        tabsContent[i].classList.add('show', 'fade');
+        tabsContent[i].classList.remove('hide');
+        tabs[i].classList.add('catalog-tab-active');
+    }
+
+    tabsParent.addEventListener('click', (e) => {
+        const target = e.target;
+
+        if(target && target.classList.contains('catalog-tab')) {
+            tabs.forEach ((item, i) => {
+                if(target == item) {
+                    hideTabContent();
+                    showTabContent(i);   
+                }
+            });
+        }
     });
 
-    $('[data-modal=burger]').on('click', function() {
-        $('.overlay-hamburger, #hamburger-mobile').fadeIn('slow');
+    hideTabContent();
+    showTabContent();
+
+    // Modal
+    function openModal(item) {
+        item.classList.remove('hide');
+        item.classList.add('show', 'fade');
+        document.body.style.overflow = 'hidden'; 
+    }
+
+    function closedWindow(item) {
+        item.classList.remove('show');
+        item.classList.add('hide');
+        document.body.style.overflow = '';
+    }
+
+    modalButton.forEach(item => {
+        item.addEventListener('click', () => {
+            openModal(modal);
+        });
     });
-    $('.button-mobile, .hamburger-close').on('click', function() {
-        $('.overlay-hamburger, #hamburger-mobile').fadeOut('slow');
+
+    modalClose.addEventListener('click', () => {
+        closedWindow(modal);
     });
+
+    modal.addEventListener('click', (e) => {
+        if(e.target === modal) {
+            closedWindow(modal);
+        }
+    });
+
+    document.addEventListener('keydown', (e) => {
+        if(e.key === 'Escape') {
+            closedWindow(modal);
+        }
+    });
+
+    // Hamburger menu
+    hamburgetBtn.addEventListener('click', () => {
+        openModal(hamburgerMenu);
+    });
+
+    hamburgerClose.addEventListener('click', () => {
+        closedWindow(hamburgerMenu);
+    });
+
+    hamburgerMenu.addEventListener('click', (e) => {
+        if(e.target === hamburgerMenu) {
+            closedWindow(hamburgerMenu);
+        }
+    });
+
+    document.addEventListener('keydown', (e) => {
+        if(e.key === 'Escape') {
+            closedWindow(hamburgerMenu);
+        }
+    });
+
+    // Scrolling
+    for (let anchor of anchors) {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault()
+            
+            const blockID = anchor.getAttribute('href').substr(1);
+            
+            document.getElementById(blockID).scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
+        });
+    }
 
   });

@@ -1,12 +1,7 @@
-html {
-    overflow-x: hidden;
-}
-
 body{
     font-family: Montserrat;
     box-sizing: border-box;
 }
-
 .container-main{
     width: 1305px;
     margin: 0 auto;
@@ -35,7 +30,13 @@ body{
     padding: 40px 0 63px 0;
 }
 
-.logo a, .logo-map a{
+.logo,
+.logo-map {
+    transition: 0.2s ease-in;
+}
+
+.logo a, 
+.logo-map a{
     font-weight: 600;
     font-size: 30px;
     color: #333333;
@@ -44,7 +45,6 @@ body{
 
 .logo:hover, .logo-map:hover{
     transform: scale(1.1);
-    transition: 0.2s ease-in;
 }
 
 .header-list{
@@ -70,11 +70,11 @@ body{
     color: #333333;
     font-weight: 500;
     font-size: 18px;
+    transition: 0.2s ease-in-out;
 }
 
 .header-list a:hover, .footer-link a:hover{
     color: #fff;
-    transition: 0.2s ease-in-out;
 }
 
 .phone a{
@@ -82,11 +82,11 @@ body{
     font-size: 24px;
     color: #333333;
     text-decoration: none;
+    transition: 0.2s ease-in-out;
 }
 
 .phone a:hover{
     color: #fff;
-    transition: 0.2s ease-in-out;
 }
 
 .hamburger {
@@ -519,14 +519,16 @@ transform: rotateZ(0deg);
     width: 32%;
     padding: 84px 0 78px 0;
     border: 1px solid #EBEBEB;
+    background: #fff;
     box-sizing: border-box;
     text-align: center;
+    transition: 0.3s ease-in-out;
 }
 
 .price-item:hover{
     border: 1px solid #FED100;
     cursor: pointer;
-    transition: 0.3s ease-in-out;
+    transform: scale(1.05);
 }
 
 .price-item h4{
@@ -614,7 +616,8 @@ transform: rotateZ(0deg);
 }
 
 .tabs-container-item{
-    display: none;
+    align-items: center;
+    justify-content: center;
     margin: 0 auto;
 }
 
@@ -639,6 +642,12 @@ transform: rotateZ(0deg);
     border: 1px solid #EBEBEB;
     margin: 0 10px;
     cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+.catalog-tab:hover {
+    background-color: #FED100;
+    color: #fff;
 }
 
 .catalog-tab-active{
@@ -668,6 +677,15 @@ transform: rotateZ(0deg);
 
 .tabs-btn{
     padding: 0;
+}
+
+.tabs-picture img {
+    height: auto;
+    width: 550px;
+}
+
+.is-left {
+    margin-right: 20px;
 }
 
 /* REVIEW */
@@ -950,6 +968,7 @@ transform: rotateZ(0deg);
     font-weight: 500;
     font-size: 20px;
     color: #333333;
+    transition: 0.2s ease-in-out;
 }
 
 .footer-mail{
@@ -962,11 +981,11 @@ transform: rotateZ(0deg);
     font-size: 20px;
     color: #333333;
     text-decoration: none;
+    transition: 0.2s ease-in-out;
 }
 
 .footer-mail a:hover{
     color: #fff;
-    transition: 0.2s ease-in-out;
 }
 
 .footer-item-link{
@@ -986,11 +1005,11 @@ transform: rotateZ(0deg);
     font-size: 20px;
     color: #333333;
     text-decoration: none;
+    transition: 0.2s ease-in-out;
 }
 
 .footer-phone a:hover{
     color: #fff;
-    transition: 0.2s ease-in-out;
 }
 
 .footer-btn{
@@ -1079,10 +1098,6 @@ transform: rotateZ(0deg);
     margin-bottom: 0;
 }
 
-#order, #thanks{
-    display: none;
-}
-
 .modal .error{
     border: 1px solid red;
     border-radius: 5px;
@@ -1145,4 +1160,29 @@ transform: rotateZ(0deg);
     line-height: 32px;
     color: #fff;
     cursor: pointer;
+}
+
+/* New addition */
+
+.show {
+    display: flex;
+}
+
+.hide {
+    display: none;
+}
+
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    from {
+        opacity: 0.1;
+    }
+
+    to {
+        opacity: 1;
+    }
 }
