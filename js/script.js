@@ -4,17 +4,15 @@ $(document).ready(function(){
             rules: {
                 name: "required",
                 phone: "required",
-              },
-              messages: {
+            },
+            messages: {
                 name: "Пожалуйста, введите своё имя",
                 phone: "Пожалуйста, введите свой номер телефона"
-              }
+            }
         });
     };
     valideForms('#call');
     valideForms('#order form');
-
-    $(".form-phone").mask("+38 (999) 999-99-99");
 
   });
 
@@ -23,12 +21,15 @@ $(document).ready(function(){
           tabsContent = document.querySelectorAll('.tabs-container-item'),
           tabsParent = document.querySelector('.tabs-link'),
           modalButton = document.querySelectorAll('[data-modal'),
-          modalClose = document.querySelector('[data-close'),
+          modalClose = document.querySelector('[data-close]'),
           modal = document.querySelector('#modal'),
           hamburgetBtn = document.querySelector('#hamburger-btn'),
           hamburgerMenu = document.querySelector('.overlay-hamburger'),
           hamburgerClose = document.querySelector('.hamburger-close'),
-          anchors = document.querySelectorAll('a[href*="#"]');
+          anchors = document.querySelectorAll('a[href*="#"]'),
+          showMore = document.querySelector('.review-btn'),
+          reviewLength = document.querySelectorAll('.review-item').length;
+
 
     // Tabs
     function hideTabContent() {
@@ -134,4 +135,64 @@ $(document).ready(function(){
         });
     }
 
+    // phone mask 
+    let eventCalllback = function (e) {
+        let el = e.target,
+        clearVal = el.dataset.phoneClear,
+        pattern = el.dataset.phonePattern,
+        matrix_def = "+38 (___) ___-__-__",
+        matrix = pattern ? pattern : matrix_def,
+        i = 0,
+        def = matrix.replace(/\D/g, ""),
+        val = e.target.value.replace(/\D/g, "");
+        if (clearVal !== 'false' && e.type === 'blur') {
+            if (val.length < matrix.match(/([\_\d])/g).length) {
+                e.target.value = '';
+                return;
+            }
+        }
+        if (def.length >= val.length) val = def;
+        e.target.value = matrix.replace(/./g, function (a) {
+            return /[_\d]/.test(a) && i < val.length ? val.charAt(i++) : i >= val.length ? "" : a
+        });
+    }
+
+    const phone_inputs = document.querySelectorAll('[data-phone-pattern]');
+    for (let elem of phone_inputs) {
+        for (let ev of ['input', 'blur', 'focus']) {
+            elem.addEventListener(ev, eventCalllback);
+        }
+    }
+
+    //Read more 
+    const parentContainer = document.querySelector('.review');
+
+    parentContainer.addEventListener('click', (e) => {
+        const target = e.target,
+              isReadMoreBtn = target.className.includes('read-more');
+
+        if(!isReadMoreBtn) return;
+
+        const currentText = e.target.parentNode.querySelector('.read-more__text');
+
+        currentText.classList.toggle('inline');
+
+        target.textContent = target.textContent.includes('Показать больше') ? "Скрыть" : "Показать больше";
+    });
+
+    //More review
+    let reviewItems = 3;
+
+    showMore.addEventListener('click', () => {
+        reviewItems += 3;
+
+        const array = Array.from(document.querySelector('.review').children);
+              visibleItems = array.slice(0, reviewItems);
+
+        visibleItems.forEach(el => el.classList.add('is-visible'));
+
+        if(visibleItems.length === reviewLength) {
+            showMore.classList.add('hide');
+        }
+    });
   });
